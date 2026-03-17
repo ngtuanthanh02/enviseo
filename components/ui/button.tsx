@@ -5,17 +5,18 @@ import { Slot } from "radix-ui"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button relative inline-flex shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap select-none outline-none transition-[background-color,color,border-color,box-shadow,filter,transform] duration-350 [transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.02] active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 before:pointer-events-none before:absolute before:-inset-1 before:opacity-0 before:[transition:transform_0.6s_cubic-bezier(0.4,0,0.2,1),opacity_0.25s_ease-out] before:mix-blend-screen before:[background:linear-gradient(105deg,transparent_0%,rgba(255,255,255,0.6)_45%,rgba(255,255,255,0.2)_55%,transparent_100%)] before:[transform:translateX(-100%)_skewX(-12deg)] before:group-hover/button:opacity-100 before:group-hover/button:[transform:translateX(100%)_skewX(-12deg)] after:pointer-events-none after:absolute after:inset-0 after:opacity-0 after:transition-opacity after:duration-350 after:[transition-timing-function:cubic-bezier(0.25,0.46,0.45,0.94)] after:[background:radial-gradient(80%_60%_at_50%_0%,rgba(255,255,255,0.28),transparent_55%)] after:group-hover/button:opacity-100",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground [a]:hover:bg-primary/80",
+        default:
+          "bg-primary text-primary-foreground shadow-sm shadow-black/10 ring-1 ring-white/10 hover:ring-white/25 hover:shadow-[0_20px_50px_-24px_rgba(255,255,255,0.5)] hover:shadow-black/20 hover:brightness-[1.04] active:brightness-[0.97] active:shadow-sm",
         outline:
-          "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+          "border-border bg-background text-foreground ring-1 ring-transparent hover:border-foreground/25 hover:ring-foreground/10 hover:bg-foreground/5 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_10px_30px_-22px_rgba(255,255,255,0.35)] aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+          "bg-secondary text-secondary-foreground shadow-sm shadow-black/10 ring-1 ring-white/8 hover:ring-white/16 hover:shadow-[0_10px_30px_-22px_rgba(255,255,255,0.28)] hover:brightness-[1.02] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ghost:
-          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+          "text-foreground ring-1 ring-transparent hover:bg-foreground/5 hover:ring-foreground/10 hover:shadow-[0_10px_30px_-26px_rgba(255,255,255,0.18)] aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
