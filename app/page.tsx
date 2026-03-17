@@ -111,16 +111,9 @@ export default function Home() {
           </nav>
 
           <div className="flex justify-end gap-3">
-            <Button
-              variant="outline"
-              className="hidden rounded-full border-foreground/20 bg-transparent hover:bg-foreground/5 md:inline-flex"
-              asChild
-            >
-              <Link href="#enterprise">Enterprise</Link>
-            </Button>
             <Button className="rounded-full" asChild>
               <Link href="#cta">
-                Request a demo <ArrowRight className="ml-2 size-4" />
+                Partner Login <ArrowRight className="size-4" />
               </Link>
             </Button>
           </div>
