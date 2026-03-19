@@ -266,28 +266,8 @@ export function ContactModalRoot() {
                 <X className="size-4" />
               </button>
 
-              <div
-                className={`relative mx-auto flex size-20 items-center justify-center rounded-full border border-emerald-400/35 bg-emerald-500/10 transition-all duration-700 sm:size-22 ${
-                  successVisible
-                    ? "scale-100 opacity-100"
-                    : "scale-40 opacity-0"
-                }`}
-              >
-                <span
-                  aria-hidden
-                  className={`absolute inset-0 rounded-full border border-emerald-300/50 transition-all duration-700 ${
-                    successVisible
-                      ? "scale-140 opacity-0"
-                      : "scale-90 opacity-70"
-                  }`}
-                />
-                <CheckCircle2
-                  className={`size-10 text-emerald-400 transition-all duration-700 sm:size-11 ${
-                    successVisible
-                      ? "scale-100 rotate-0 opacity-100"
-                      : "scale-0 -rotate-35 opacity-0"
-                  }`}
-                />
+              <div className="relative mx-auto flex size-20 items-center justify-center rounded-full border border-emerald-400/35 bg-emerald-500/10 sm:size-22">
+                <CheckCircle2 className="size-10 text-emerald-400 sm:size-11" />
               </div>
               <h4 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Submit successful
