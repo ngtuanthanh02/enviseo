@@ -4,14 +4,14 @@ import "./globals.css";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
-  weight: ["300", "700"],
+  weight: ["200", "300", "700", "800"],
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Enviseo",
   description:
-    "Authority, integrated. The operating environment for high-stakes transit and hospitality.",
+    "Everything follows your lead. The operating environment for the modern estate.",
 };
 
 export default function RootLayout({

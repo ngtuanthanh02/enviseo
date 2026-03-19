@@ -10,25 +10,41 @@ import {
 } from "@/components/ui/carousel"
 
 const SLIDES = [
-  { src: "/images/FrontScreen.png", title: "Smart Bus", subtitle: "Power & data" },
-  { src: "/images/BackChairScreen.png", title: "In-seat", subtitle: "Silicon-locked" },
-  { src: "/images/image.png", title: "Interface", subtitle: "Transit & hospitality" },
-  { src: "/images/image copy.png", title: "Operations", subtitle: "Real-time" },
+  {
+    src: "/images/tablet/FrontScreen.png",
+    title: "Everything follows your lead.",
+    subtitle: "The operating environment",
+  },
+  {
+    src: "/images/tablet/BackScreen.webp",
+    title: "The backseat, evolved.",
+    subtitle: "The Smart Shell™",
+  },
+  {
+    src: "/images/tablet/tabletsOnShelf.png",
+    title: "Command the home.",
+    subtitle: "The Hub",
+  },
+  {
+    src: "/images/tablet/layerofphone.jpeg",
+    title: "Locked by silicon.",
+    subtitle: "The Logic",
+  },
 ] as const
 
 export function SlideSection() {
   return (
-    <section id="slide" className="border-t border-foreground/6 px-4 py-24 sm:px-6 md:py-32 lg:px-10">
+    <section id="slide" className="px-4 py-20 sm:px-6 sm:py-24 md:py-32 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 text-center">
           <p className="text-xs font-light uppercase tracking-[0.28em] text-foreground/60">
             Platform
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Built for the field.
+            Minimalist scroll.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg font-light text-foreground/70">
-            One environment for hardware, access, and service — see it in action.
+            Massive imagery. Minimal noise.
           </p>
         </div>
 
