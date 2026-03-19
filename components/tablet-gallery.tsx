@@ -37,7 +37,7 @@ const GALLERY_ITEMS = [
     subtitle: "Silicon truth",
   },
   {
-    src: "/images/tablet/screen1.jpeg",
+    src: "/images/tablet/screen1.png",
     title: "Effortless service",
     subtitle: "Single-tap reality",
   },

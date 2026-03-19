@@ -179,41 +179,39 @@ export default function Home() {
                 </h2>
               </div>
 
-              {/* Desktop/tablet: copy outside image (two top corners) */}
-              <div className="hidden sm:flex items-start justify-between gap-10">
-                <div className="max-w-104">
-                  <p className="text-[11px] font-extralight uppercase tracking-[0.34em] text-white/62">
-                    Order, verify, and settle
-                  </p>
-                  <p className="mt-5 text-[11px] font-extralight uppercase tracking-[0.34em] text-white/55">
-                    Tap
-                  </p>
-                  <p className="mt-2 text-base font-extralight leading-relaxed text-white/78 sm:text-lg">
-                    Order, verify, and settle with a single tap.
-                  </p>
-                </div>
+              {/* Desktop/tablet: symmetric 2×3 grid — shared rows so labels + body align */}
+              <div className="hidden min-w-0 sm:grid sm:grid-cols-2 sm:gap-x-10 sm:gap-y-5 lg:gap-x-14">
+                <p className="max-w-104 text-[11px] font-extralight uppercase tracking-[0.34em] text-white/62">
+                  Order, verify, and settle
+                </p>
+                <span aria-hidden className="max-w-104" />
 
-                <div className="max-w-104 text-right">
-                  <p className="text-[11px] font-extralight uppercase tracking-[0.34em] text-white/55">
-                    Real-time
-                  </p>
-                  <p className="mt-2 text-base font-extralight leading-relaxed text-white/78 sm:text-lg">
-                    Authenticated at the port. Finished in real-time.
-                  </p>
-                </div>
+                <p className="max-w-104 text-[11px] font-extralight uppercase tracking-[0.34em] text-white/55">
+                  Tap
+                </p>
+                <p className="min-w-0 w-full text-right text-[11px] font-extralight uppercase tracking-[0.34em] text-white/55">
+                  Real-time
+                </p>
+
+                <p className="max-w-104 text-base font-extralight leading-relaxed text-white/78 sm:text-lg">
+                  Order, verify, and settle with a single tap.
+                </p>
+                <p className="min-w-0 w-full text-right text-base font-extralight leading-relaxed text-white/78 sm:text-lg">
+                  Authenticated at the port. Finished in real-time.
+                </p>
               </div>
 
               <div className="relative aspect-video">
                 <Image
-                  src="/images/tablet/screen1.jpeg"
+                  src="/images/tablet/screen1.png"
                   alt="Tablet interface representing a single-tap experience"
                   fill
                   sizes="(min-width: 1024px) 80vw, 100vw"
                   className="object-cover"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/92 via-black/45 to-transparent" />
-                <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/72 via-black/18 to-transparent" />
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_70%_20%,rgba(255,255,255,0.16)_0%,transparent_70%)] opacity-80" />
+                {/* <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/72 via-black/18 to-transparent" /> */}
+                {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_70%_20%,rgba(255,255,255,0.16)_0%,transparent_70%)] opacity-80" /> */}
               </div>
 
               {/* Mobile: move copy below image (avoid clipping inside aspect-video) */}
