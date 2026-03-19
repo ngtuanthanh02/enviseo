@@ -5,7 +5,21 @@ import { ArrowRight, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-export function ContactModal() {
+type ContactModalProps = {
+  triggerLabel?: string;
+  triggerClassName?: string;
+  triggerVariant?: "default" | "outline";
+  triggerSize?: "default" | "lg";
+  showArrow?: boolean;
+};
+
+export function ContactModal({
+  triggerLabel = "Contact us",
+  triggerClassName,
+  triggerVariant = "outline",
+  triggerSize = "default",
+  showArrow = true,
+}: ContactModalProps) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -51,11 +65,19 @@ export function ContactModal() {
   return (
     <>
       <Button
-        variant="outline"
-        className="mt-6 cursor-pointer rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/5"
+        variant={triggerVariant}
+        size={triggerSize}
+        className={[
+          "cursor-pointer",
+          triggerVariant === "outline"
+            ? "mt-6 rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/5"
+            : "",
+          triggerClassName ?? "",
+        ].join(" ")}
         onClick={openModal}
       >
-        Contact us <ArrowRight className="ml-1.5 size-4" />
+        {triggerLabel}
+        {showArrow && <ArrowRight className="ml-1.5 size-4" />}
       </Button>
 
       {mounted && (

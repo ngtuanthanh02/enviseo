@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ContactModal } from "@/components/contact-modal";
 
 function usePrefersReducedMotion() {
   const reduceRef = useRef(false);
@@ -126,15 +126,11 @@ export function Hero() {
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center">
-            <Button
-              size="lg"
-              className="w-full justify-center rounded-full bg-white px-8 text-black shadow-[0_20px_60px_-34px_rgba(255,255,255,0.65)] ring-1 ring-white/25 hover:bg-white/92 hover:shadow-[0_24px_70px_-34px_rgba(255,255,255,0.75)] sm:w-auto"
-              asChild
-            >
-              <Link href="#inquire">
-                Inquire <ArrowRight className="ml-2 size-4" />
-              </Link>
-            </Button>
+            <ContactModal
+              triggerLabel="Inquire"
+              triggerVariant="default"
+              triggerClassName="!mt-0 w-full justify-center rounded-full bg-white px-8 text-black shadow-[0_20px_60px_-34px_rgba(255,255,255,0.65)] ring-1 ring-white/25 hover:bg-white/92 hover:shadow-[0_24px_70px_-34px_rgba(255,255,255,0.75)] sm:w-auto"
+            />
             <Button
               size="lg"
               variant="outline"

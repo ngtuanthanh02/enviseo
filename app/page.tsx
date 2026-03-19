@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { TabletGallery } from "@/components/tablet-gallery";
 import { Hero } from "@/components/hero";
 import { SiteHeader } from "@/components/site-header";
@@ -269,9 +267,12 @@ export default function Home() {
                 The operating environment for the modern estate.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Button size="lg" className="rounded-full px-10">
-                  Inquire <ArrowRight className="size-4" />
-                </Button>
+                <ContactModal
+                  triggerLabel="Inquire"
+                  triggerVariant="default"
+                  triggerSize="lg"
+                  triggerClassName="rounded-full px-10"
+                />
               </div>
             </div>
           </div>
