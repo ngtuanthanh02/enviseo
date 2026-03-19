@@ -104,12 +104,6 @@ export function Hero() {
               "radial-gradient(1000px 520px at 20% 0%, rgba(34,211,238,0.18) 0%, transparent 62%), radial-gradient(900px 520px at 80% 40%, rgba(99,102,241,0.16) 0%, transparent 60%), linear-gradient(to bottom, rgba(5,8,22,0.45), rgba(0,0,0,0.72))",
           }}
         />
-        <div className="absolute inset-0 enviseo-grid" />
-        <div className="absolute -inset-x-10 -top-24 h-[560px] enviseo-spotlight opacity-90" />
-        <div className="absolute -left-24 top-10 h-[560px] w-[560px] enviseo-orbit" />
-        <div className="absolute -right-28 bottom-0 h-[680px] w-[680px] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.10)_0%,transparent_68%)] blur-3xl opacity-80" />
-        <div className="absolute inset-0 bg-[radial-gradient(65%_55%_at_40%_35%,rgba(56,189,248,0.10)_0%,transparent_62%)]" />
-        <div className="absolute -inset-10 enviseo-grain" />
       </div>
 
       <div className="relative z-10 mx-auto grid lg:min-h-[74vh] max-w-7xl grid-cols-1 items-center gap-8 px-4 pb-10 pt-10 sm:min-h-[86vh] sm:items-end sm:gap-12 sm:px-6 sm:pb-18 sm:pt-16 md:pt-20 lg:grid-cols-2 lg:items-center lg:gap-16 xl:gap-20 lg:px-10 lg:pb-22">

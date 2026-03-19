@@ -27,17 +27,17 @@ export function SiteHeader({ nav }: { nav: NavItem[] }) {
           : "border-b border-transparent bg-transparent",
       ].join(" ")}
     >
-      <div className="mx-auto grid h-16 max-w-7xl grid-cols-2 items-center px-4 sm:px-6 lg:grid-cols-[auto_1fr_auto] lg:gap-6 lg:px-10">
+      <div className="mx-auto grid h-16 max-w-7xl grid-cols-2 items-center px-4 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:gap-0 lg:px-10">
         <Link
           href="#"
-          className="w-fit text-xl font-bold tracking-tight lowercase text-white/90 transition-colors duration-200 hover:text-white"
+          className="w-fit justify-self-start text-xl font-bold tracking-tight lowercase text-white/90 transition-colors duration-200 hover:text-white"
           aria-label="Enviseo home"
         >
           enviseo
         </Link>
 
         <nav
-          className="hidden items-center justify-center gap-2 lg:flex"
+          className="hidden items-center justify-center gap-2 justify-self-center lg:flex"
           aria-label="Primary section navigation"
         >
           {nav.map((item) => (
@@ -51,7 +51,7 @@ export function SiteHeader({ nav }: { nav: NavItem[] }) {
           ))}
         </nav>
 
-        <div className="flex justify-end">
+        <div className="flex justify-end justify-self-end">
           <Button
             variant="outline"
             className="rounded-full border-white/20 bg-transparent text-white hover:bg-white/5 px-3 sm:px-4"
