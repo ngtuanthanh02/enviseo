@@ -3,7 +3,7 @@ import Image from "next/image";
 import { TabletGallery } from "@/components/tablet-gallery";
 import { Hero } from "@/components/hero";
 import { SiteHeader } from "@/components/site-header";
-import { ContactModal } from "@/components/contact-modal";
+import { ContactModalRoot, ContactModalTrigger } from "@/components/contact-modal";
 
 function SectionGlow() {
   return (
@@ -233,7 +233,7 @@ export default function Home() {
                   For manufacturing partnerships or licensing for our patent pending technology please contact us below
                   </p>
                 </div>
-                <ContactModal />
+                <ContactModalTrigger />
               </div>
 
               <div className="relative flex-1">
@@ -267,7 +267,7 @@ export default function Home() {
                 The operating environment for the modern estate.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <ContactModal
+                <ContactModalTrigger
                   triggerLabel="Inquire"
                   triggerVariant="default"
                   triggerSize="lg"
@@ -285,6 +285,7 @@ export default function Home() {
             </p>
           </div>
         </footer>
+        <ContactModalRoot />
       </main>
     </div>
   );

@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ContactModal } from "@/components/contact-modal";
+import { ContactModalTrigger } from "@/components/contact-modal";
 
 function usePrefersReducedMotion() {
   const reduceRef = useRef(false);
@@ -126,15 +126,16 @@ export function Hero() {
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center">
-            <ContactModal
+            <ContactModalTrigger
               triggerLabel="Inquire"
               triggerVariant="default"
-              triggerClassName="!mt-0 w-full justify-center rounded-full bg-white px-8 text-black shadow-[0_20px_60px_-34px_rgba(255,255,255,0.65)] ring-1 ring-white/25 hover:bg-white/92 hover:shadow-[0_24px_70px_-34px_rgba(255,255,255,0.75)] sm:w-auto"
+              triggerSize="lg"
+              triggerClassName="!mt-0 h-8 w-full justify-center rounded-full border-0 bg-white px-8 text-black ring-0 shadow-[0_20px_60px_-34px_rgba(255,255,255,0.65)] hover:bg-white/92 hover:shadow-[0_24px_70px_-34px_rgba(255,255,255,0.75)] sm:w-auto"
             />
             <Button
               size="lg"
-              variant="outline"
-              className="w-full justify-center rounded-full border-white/20 bg-transparent px-8 text-white hover:bg-white/5 sm:w-auto"
+              variant="ghost"
+              className="h-8 w-full justify-center rounded-full border-0 bg-white/6 px-8 text-white ring-0 hover:bg-white/12 sm:w-auto"
               asChild
             >
               <Link href="#smart-shell">Explore</Link>
