@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { TabletGallery } from "@/components/tablet-gallery";
 import { Hero } from "@/components/hero";
 import { SiteHeader } from "@/components/site-header";
+import { ContactModal } from "@/components/contact-modal";
 
 function SectionGlow() {
   return (
@@ -44,9 +45,9 @@ export default function Home() {
   const sectionClass = "scroll-mt-24 py-18 sm:py-24 md:py-32";
   const containerClass = "mx-auto max-w-7xl px-4 sm:px-6 lg:px-10";
   const sectionTextClass =
-    "relative z-10 text-center sm:text-left max-w-xl w-[28rem]";
+    "relative z-10 w-full max-w-xl text-center sm:text-left lg:max-w-[28rem]";
   const sectionMediaClass =
-    "relative aspect-video overflow-hidden rounded-2xl bg-white/5";
+    "relative aspect-video overflow-hidden rounded-2xl";
 
   return (
     <div className="min-h-screen overflow-x-clip bg-black text-white">
@@ -64,7 +65,7 @@ export default function Home() {
               <p className="text-xs font-extralight uppercase tracking-[0.34em] text-white/60">
                 The Smart Shell™
               </p>
-              <h2 className="mt-5 text-5xl font-extrabold leading-[0.98] tracking-tight sm:text-6xl">
+              <h2 className="mt-5 text-4xl font-extrabold leading-[0.98] tracking-tight sm:text-6xl">
                 The backseat,
                 <span className="block">evolved.</span>
               </h2>
@@ -100,15 +101,14 @@ export default function Home() {
                 <p className="text-xs font-extralight uppercase tracking-[0.34em] text-white/60">
                   The Hub
                 </p>
-                <h2 className="mt-5 text-5xl font-extrabold leading-[0.96] tracking-tight sm:text-6xl">
+                <h2 className="mt-5 text-4xl font-extrabold leading-[0.96] tracking-tight sm:text-6xl">
                   Command
                   <span className="block">the home.</span>
                 </h2>
                 <div className="mt-8 space-y-4 text-base font-extralight leading-relaxed text-white/72 sm:text-lg">
                   <p>A weighted, sculptural center for your daily flow.</p>
                   <p>
-                    From family logistics to financial finality, authority is
-                    now built-in.
+                   From family organizing to financial finality, authority is now built-in.
                   </p>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function Home() {
                 <p className="text-xs font-extralight uppercase tracking-[0.34em] text-white/60">
                   The Logic
                 </p>
-                <h2 className="mt-6 text-6xl font-extrabold leading-[0.92] tracking-tight sm:text-7xl">
+                <h2 className="mt-6 text-4xl font-extrabold leading-[0.92] tracking-tight sm:text-7xl">
                   Locked
                   <span className="block text-white/70">by silicon.</span>
                 </h2>
@@ -169,62 +169,24 @@ export default function Home() {
         {/* Section 4 — Experience */}
         <section id="experience" className={sectionClass}>
           <div className={containerClass}>
-            <div className="grid gap-10 lg:gap-14">
-              <div className="max-w-3xl text-center sm:text-left">
+            <div className="flex flex-col gap-10 sm:gap-12 lg:flex-row-reverse lg:items-center">
+              <div className={sectionTextClass}>
                 <p className="text-xs font-extralight uppercase tracking-[0.34em] text-white/60">
                   The Experience
                 </p>
                 <h2 className="mt-5 text-4xl font-extrabold leading-[1.02] tracking-tight sm:mt-6 sm:text-6xl sm:leading-[0.96]">
                   Effortless in every sense.
                 </h2>
-              </div>
 
-              {/* Desktop/tablet: symmetric 2×3 grid — shared rows so labels + body align */}
-              <div className="hidden min-w-0 sm:grid sm:grid-cols-2 sm:gap-x-10 sm:gap-y-5 lg:gap-x-14">
-                <p className="max-w-104 text-[11px] font-extralight uppercase tracking-[0.34em] text-white/62">
-                  Order, verify, and settle
-                </p>
-                <span aria-hidden className="max-w-104" />
-
-                <p className="max-w-104 text-[11px] font-extralight uppercase tracking-[0.34em] text-white/55">
-                  Tap
-                </p>
-                <p className="min-w-0 w-full text-right text-[11px] font-extralight uppercase tracking-[0.34em] text-white/55">
-                  Real-time
-                </p>
-
-                <p className="max-w-104 text-base font-extralight leading-relaxed text-white/78 sm:text-lg">
-                  Order, verify, and settle with a single tap.
-                </p>
-                <p className="min-w-0 w-full text-right text-base font-extralight leading-relaxed text-white/78 sm:text-lg">
-                  Authenticated at the port. Finished in real-time.
-                </p>
-              </div>
-
-              <div className="relative aspect-video">
-                <Image
-                  src="/images/tablet/screen1.png"
-                  alt="Tablet interface representing a single-tap experience"
-                  fill
-                  sizes="(min-width: 1024px) 80vw, 100vw"
-                  className="object-cover"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/92 via-black/45 to-transparent" />
-                {/* <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-black/72 via-black/18 to-transparent" /> */}
-                {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_70%_20%,rgba(255,255,255,0.16)_0%,transparent_70%)] opacity-80" /> */}
-              </div>
-
-              {/* Mobile: move copy below image (avoid clipping inside aspect-video) */}
-              <div className="rounded-2xl border border-white/10 bg-black/35 p-4 backdrop-blur sm:hidden">
-                <p className="text-[11px] font-extralight uppercase tracking-[0.34em] text-white/62">
-                  Order, verify, and settle
-                </p>
-                <div className="mt-5 grid gap-6">
+                <div className="mt-8 grid gap-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-5">
+                  <p className="text-[11px] font-extralight uppercase tracking-[0.34em] text-white/62 sm:col-span-2">
+                    Order, verify, and settle
+                  </p>
                   <div>
                     <p className="text-[11px] font-extralight uppercase tracking-[0.34em] text-white/55">
                       Tap
                     </p>
-                    <p className="mt-2 text-base font-extralight leading-relaxed text-white/78">
+                    <p className="mt-2 text-base font-extralight leading-relaxed text-white/78 sm:text-lg">
                       Order, verify, and settle with a single tap.
                     </p>
                   </div>
@@ -232,10 +194,23 @@ export default function Home() {
                     <p className="text-[11px] font-extralight uppercase tracking-[0.34em] text-white/55">
                       Real-time
                     </p>
-                    <p className="mt-2 text-base font-extralight leading-relaxed text-white/78">
+                    <p className="mt-2 text-base font-extralight leading-relaxed text-white/78 sm:text-lg">
                       Authenticated at the port. Finished in real-time.
                     </p>
                   </div>
+                </div>
+              </div>
+
+              <div className="relative flex-1">
+                <div className={sectionMediaClass}>
+                  <Image
+                    src="/images/tablet/screen1.png"
+                    alt="Tablet interface representing a single-tap experience"
+                    fill
+                    sizes="(min-width: 1024px) 80vw, 100vw"
+                    className="object-cover"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/92 via-black/45 to-transparent" />
                 </div>
               </div>
             </div>
@@ -250,17 +225,17 @@ export default function Home() {
                 <p className="text-xs font-extralight uppercase tracking-[0.34em] text-white/60">
                   The Foundry
                 </p>
-                <h2 className="mt-6 text-6xl font-extrabold leading-[0.92] tracking-tight sm:text-7xl">
+                <h2 className="mt-6 text-4xl font-extrabold leading-[0.92] tracking-tight sm:text-7xl">
                   Built
                   <span className="block text-white/70">to lead.</span>
                 </h2>
                 <div className="mt-9 space-y-5 text-lg font-extralight leading-relaxed text-white/70">
                   <p>Engineering the 2026 rollout.</p>
                   <p>
-                    For manufacturing partnerships or industrial licensing,
-                    contact the Principal.
+                  For manufacturing partnerships or licensing for our patent pending technology please contact us below
                   </p>
                 </div>
+                <ContactModal />
               </div>
 
               <div className="relative flex-1">
@@ -282,7 +257,7 @@ export default function Home() {
 
         <section
           id="inquire"
-          className={`${sectionClass} relative z-10 overflow-visible`}
+          className={`${sectionClass} relative overflow-visible`}
         >
           <div className={containerClass}>
             <div className="relative mx-auto max-w-4xl text-center">
@@ -306,9 +281,6 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3">
             <p className="text-sm font-extralight text-white/60">
               © 2011–2026 Enviseo.
-            </p>
-            <p className="text-sm font-extralight text-white/60 opacity-50">
-              Nashville | Phoenix | Zug
             </p>
           </div>
         </footer>

@@ -107,7 +107,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto grid lg:min-h-[74vh] max-w-7xl grid-cols-1 items-center gap-8 px-4 pb-10 pt-10 sm:min-h-[86vh] sm:items-end sm:gap-12 sm:px-6 sm:pb-18 sm:pt-16 md:pt-20 lg:grid-cols-2 lg:items-center lg:gap-16 xl:gap-20 lg:px-10 lg:pb-22">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl text-center sm:text-left">
           <p className="text-xs font-extralight uppercase tracking-[0.34em] text-white/60">
             ENVISEO.COM | 2026
           </p>
@@ -121,7 +121,7 @@ export function Hero() {
             <span className="block">lead.</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base font-extralight leading-relaxed text-white/70 sm:mt-7 sm:text-xl">
+          <p className="mx-auto mt-5 max-w-xl text-base font-extralight leading-relaxed text-white/70 sm:mx-0 sm:mt-7 sm:text-xl">
             The operating environment for the modern estate.
           </p>
 

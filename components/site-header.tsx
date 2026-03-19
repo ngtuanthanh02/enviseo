@@ -57,7 +57,7 @@ export function SiteHeader({ nav }: { nav: NavItem[] }) {
             className="rounded-full border-white/20 bg-transparent text-white hover:bg-white/5 px-3 sm:px-4"
             asChild
           >
-            <Link href="#inquire">
+            <Link href="/login">
               Partner Login <ArrowRight className="ml-1.5 size-4" />
             </Link>
           </Button>
