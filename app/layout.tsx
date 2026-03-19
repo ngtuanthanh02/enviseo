@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Enviseo",
   description:
     "Everything follows your lead. The operating environment for the modern estate.",
+  icons: {
+    icon: "/icon.svg",
+  },
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
