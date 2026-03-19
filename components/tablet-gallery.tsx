@@ -17,7 +17,7 @@ const GALLERY_ITEMS = [
     subtitle: "A single ray of light",
   },
   {
-    src: "/images/tablet/.png",
+    src: "/images/tablet/BackChairScreen.png",
     title: "Rear seat architecture",
     subtitle: "Woven power and data",
   },
