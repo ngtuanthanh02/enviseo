@@ -9,9 +9,9 @@ export default function LoginPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
       {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_70%_at_50%_20%,rgba(130,150,255,0.12)_0%,transparent_60%)]" /> */}
-      <section className="relative grid min-h-screen lg:grid-cols-[1fr_1.05fr]">
-            <div className="relative z-10 order-2 flex flex-col justify-center px-7 py-10 sm:px-10 sm:py-12 lg:order-1 lg:px-16 xl:px-50">
-              <div className="mb-10 flex items-center gap-3">
+      <section className="relative grid min-h-screen lg:grid-cols-[800px_2fr]">
+            <div className="relative z-10 order-2 flex flex-col justify-center px-7 py-10 text-center sm:px-10 sm:py-12 lg:order-1 lg:px-16 lg:text-left xl:px-50">
+              <div className="mb-10 flex items-center justify-center gap-3 lg:justify-start">
                 <Link
                   href="/"
                   className="text-xl font-semibold lowercase tracking-tight text-white/92 transition hover:text-white"
@@ -26,13 +26,13 @@ export default function LoginPage() {
               <h1 className="mt-3 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
                 Partner Login
               </h1>
-              <p className="mt-3 max-w-sm text-sm font-extralight leading-relaxed text-white/68">
+              <p className="mx-auto mt-3 max-w-sm text-sm font-extralight leading-relaxed text-white/68 lg:mx-0">
                 Enter your credentials to continue to Enviseo portal.
               </p>
 
-              <form className="mt-8 grid w-full max-w-sm gap-4">
+              <form className="mx-auto mt-8 grid w-full max-w-sm gap-4 lg:mx-0">
                 <label className="grid gap-2">
-                  <span className="text-[11px] font-extralight uppercase tracking-[0.2em] text-white/58">
+                  <span className="text-[11px] text-left font-extralight uppercase tracking-[0.2em] text-white/58">
                     Username
                   </span>
                   <input
@@ -46,7 +46,7 @@ export default function LoginPage() {
                 </label>
 
                 <label className="grid gap-2">
-                  <span className="text-[11px] font-extralight uppercase tracking-[0.2em] text-white/58">
+                  <span className="text-[11px] text-left font-extralight uppercase tracking-[0.2em] text-white/58">
                     Password
                   </span>
                   <input
@@ -67,14 +67,14 @@ export default function LoginPage() {
               </form>
             </div>
 
-            <div className="order-1 relative min-h-[300px] lg:order-2 lg:min-h-full">
+            <div className="hidden lg:block order-1 relative min-h-[300px] lg:order-2 lg:min-h-full">
               <Image
-                src="/images/tablet/BackChairScreen.png"
+                src="/images/tablet/ScreenSUV.jpg"
                 alt="Enviseo tablet visual"
                 fill
                 priority
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-center mask-[linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.2)_18%,rgba(0,0,0,0.45)_32%,black_52%,black_100%)] [-webkit-mask-image:linear-gradient(to_right,transparent_4%,rgba(0,0,0,0.05)_18%,rgba(0,0,0,0.45)_32%,black_52%,black_100%)]"
+                sizes="(min-width: 1024px) 66vw, 100vw"
+                className="object-cover object-right mask-[linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.2)_18%,rgba(0,0,0,0.45)_32%,black_52%,black_100%)] "
               />
               <div className="pointer-events-none absolute inset-0 bg-black/28" />
             </div>

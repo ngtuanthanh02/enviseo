@@ -81,12 +81,12 @@ export function Hero() {
           className="absolute inset-y-0 right-[-20%] w-[120%] overflow-hidden opacity-95 mask-[linear-gradient(to_left,black_92%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_left,black_82%,transparent_100%)] sm:right-[-8%] sm:w-[82%] sm:translate-x-[2%]"
         >
           <Image
-            src="/images/tablet/BackChairScreen.png"
+            src="/images/tablet/ScreenSUV.jpg"
             alt=""
             fill
             priority
             sizes="(min-width: 1024px) 60vw, 100vw"
-            className="object-cover object-right opacity-90 sm:object-contain sm:object-[92%_50%]"
+            className="object-cover object-right opacity-90 sm:object-contain sm:object-[60%_60%]"
           />
           {/* Top/bottom feather to hide image edges */}
           <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-black/90 via-black/35 to-transparent sm:h-44" />
