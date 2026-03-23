@@ -9,11 +9,12 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Enviseo",
+  title: "Enviseo Smart Hub",
   description:
     "Everything follows your lead. The operating environment for the modern estate.",
   icons: {
-    icon: "/icon.svg",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
   },
   themeColor: "#000000",
 };
